@@ -4,6 +4,11 @@ import 'package:audioplayers/audio_cache.dart';
 void main() => runApp(XylophoneApp());
 
 class XylophoneApp extends StatelessWidget {
+  void playSound(int soundNumber) {
+    final player = AudioCache();
+    player.play('note$soundNumber.wav');
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -13,56 +18,49 @@ class XylophoneApp extends StatelessWidget {
             children: <Widget>[
               FlatButton(
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('note1.wav');
+                  playSound(1);
                 },
                 color: Colors.red,
                 child: Text(''),
               ),
               FlatButton(
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('note2.wav');
+                  playSound(2);
                 },
                 color: Colors.orange,
                 child: Text(''),
               ),
               FlatButton(
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('note3.wav');
+                  playSound(3);
                 },
                 color: Colors.yellow,
                 child: Text(''),
               ),
               FlatButton(
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('note4.wav');
+                  playSound(4);
                 },
                 color: Colors.green,
                 child: Text(''),
               ),
               FlatButton(
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('note5.wav');
+                  playSound(5);
                 },
                 color: Colors.teal,
                 child: Text(''),
               ),
               FlatButton(
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('note6.wav');
+                  playSound(6);
                 },
                 color: Colors.blue,
                 child: Text(''),
               ),
               FlatButton(
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('note7.wav');
+                  playSound(7);
                 },
                 color: Colors.purple,
                 child: Text(''),
